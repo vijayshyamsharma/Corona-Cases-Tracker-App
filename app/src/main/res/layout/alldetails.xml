@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp">
+
+
+        <TextView
+            android:id="@+id/mainlabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Coronavirus COVID-19\nGlobal Cases"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <TextView
+            android:id="@+id/totalconfirmed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Total Confirmed"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/totaldeath1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainlabel1" />
+
+        <TextView
+            android:id="@+id/totaldeath1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Deaths"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+
+            app:layout_constraintBaseline_toBaselineOf="@+id/totalconfirmed1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/totalconfirmed1" />
+
+        <TextView
+            android:id="@+id/confirmedcount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-----"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/totalconfirmed1"
+            app:layout_constraintStart_toStartOf="@+id/totalconfirmed1"
+            app:layout_constraintTop_toBottomOf="@+id/totalconfirmed1" />
+
+        <TextView
+            android:id="@+id/deathcount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-----"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/totaldeath1"
+            app:layout_constraintStart_toStartOf="@+id/totaldeath1"
+            app:layout_constraintTop_toBottomOf="@+id/totaldeath1" />
+
+        <TextView
+            android:id="@+id/totalrecovered1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Total Recovered"
+            android:textColor="#7bb974"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmedcount1" />
+
+        <TextView
+            android:id="@+id/recoveredcount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-----"
+            android:textColor="#7bb974"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/totalrecovered1"
+            app:layout_constraintStart_toStartOf="@+id/totalrecovered1"
+            app:layout_constraintTop_toBottomOf="@+id/totalrecovered1" />
+
+        <ImageView
+            android:id="@+id/imageviewicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/coivdlogo"
+            app:layout_constraintBottom_toTopOf="@id/mainlabel1"
+            app:layout_constraintEnd_toEndOf="@+id/mainlabel1"
+            app:layout_constraintStart_toStartOf="@+id/mainlabel1" />
+
+        <TextView
+            android:id="@+id/todayglobalcases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Today Cases"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/totalconfirmed1"
+            app:layout_constraintTop_toBottomOf="@+id/recoveredcount1" />
+
+        <TextView
+            android:id="@+id/todayglobalcasescount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-----"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/todayglobalcases"
+            app:layout_constraintStart_toStartOf="@+id/todayglobalcases"
+            app:layout_constraintTop_toBottomOf="@+id/todayglobalcases" />
+
+        <TextView
+            android:id="@+id/todayglobaldeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Today Deaths"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/criticalglobalcases"
+            app:layout_constraintTop_toBottomOf="@+id/deathspermillioncount" />
+
+        <TextView
+            android:id="@+id/todayglobaldeathscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="-----"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/todayglobaldeaths"
+            app:layout_constraintStart_toStartOf="@+id/todayglobaldeaths"
+            app:layout_constraintTop_toBottomOf="@+id/todayglobaldeaths"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/activeglobalcases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Active Cases"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/todayglobalcases"
+            app:layout_constraintTop_toBottomOf="@+id/deathspermillioncount" />
+
+        <TextView
+            android:id="@+id/activeglobalcasescount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="-----"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/activeglobalcases"
+            app:layout_constraintStart_toStartOf="@+id/activeglobalcases"
+            app:layout_constraintTop_toBottomOf="@+id/activeglobalcases"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/criticalglobalcases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Critical Cases"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/totaldeath1"
+            app:layout_constraintTop_toBottomOf="@+id/recoveredcount1" />
+
+        <TextView
+            android:id="@+id/criticalglobalcasescount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="-----"
+            android:textColor="#e60000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/criticalglobalcases"
+            app:layout_constraintStart_toStartOf="@+id/criticalglobalcases"
+            app:layout_constraintTop_toBottomOf="@+id/criticalglobalcases" />
+
+        <TextView
+            android:id="@+id/deathspermillion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Deaths Per One Million"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todayglobalcasescount" />
+
+        <TextView
+            android:id="@+id/deathspermillioncount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="----"
+            android:textColor="#999999"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/deathspermillion"
+            app:layout_constraintStart_toStartOf="@+id/deathspermillion"
+            app:layout_constraintTop_toBottomOf="@+id/deathspermillion"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

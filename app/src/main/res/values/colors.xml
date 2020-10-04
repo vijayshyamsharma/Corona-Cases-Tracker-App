@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d19f49</color>
+    <color name="colorPrimaryDark">#d19f49</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="colorTotalConfirmed">#e60000</color>
+    <color name="colorTotalDeaths">#849486</color>
+    <color name="colorTotalRecovered">#7bb974</color>
+
+    <color name="backg">#fdc</color>
+
+</resources>

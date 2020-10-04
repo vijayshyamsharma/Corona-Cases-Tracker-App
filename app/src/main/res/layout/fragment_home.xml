@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="@drawable/shape">
+
+
+    <TextView
+        android:id="@+id/mainlabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Coronavirus COVID-19\nGlobal Cases"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <TextView
+        android:id="@+id/totalconfirmed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Total Confirmed"
+        android:textColor="#e60000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/totaldeath1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainlabel1" />
+
+    <TextView
+        android:id="@+id/totaldeath1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Deaths"
+        android:textColor="#999999"
+        android:textSize="20sp"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/totalconfirmed1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalconfirmed1" />
+
+    <TextView
+        android:id="@+id/confirmedcount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-----"
+        android:textColor="#e60000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/totalconfirmed1"
+        app:layout_constraintStart_toStartOf="@+id/totalconfirmed1"
+        app:layout_constraintTop_toBottomOf="@+id/totalconfirmed1" />
+
+    <TextView
+        android:id="@+id/deathcount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-----"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/totaldeath1"
+        app:layout_constraintStart_toStartOf="@+id/totaldeath1"
+        app:layout_constraintTop_toBottomOf="@+id/totaldeath1" />
+
+    <TextView
+        android:id="@+id/totalrecovered1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="Total Recovered"
+        android:textColor="#7bb974"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmedcount1" />
+
+    <TextView
+        android:id="@+id/recoveredcount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="-----"
+        android:textColor="#7bb974"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalrecovered1" />
+
+    <TextView
+        android:id="@+id/updatedtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="8dp"
+        android:text="Last Updated\n Mon, 23 Mar 2020 1:20:30 PM"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recoveredcount1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageviewicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/coivdlogo"
+        app:layout_constraintBottom_toTopOf="@id/mainlabel1"
+        app:layout_constraintEnd_toEndOf="@+id/mainlabel1"
+        app:layout_constraintStart_toStartOf="@+id/mainlabel1" />
+
+    <TextView
+        android:id="@+id/alldetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="view all details"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/updatedtext"
+        app:layout_constraintStart_toStartOf="@+id/updatedtext"
+        app:layout_constraintTop_toBottomOf="@+id/updatedtext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
